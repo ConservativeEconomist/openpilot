@@ -75,6 +75,8 @@ Community WIP Cars
 
 - [Classic Tesla Model S (pre-AP)](https://github.com/commaai/openpilot/pull/145)
 
+- [2018 Acura TLX with AcuraWatch Plus](https://github.com/commaai/openpilot/pull/)
+
 Directory structure
 ------
 

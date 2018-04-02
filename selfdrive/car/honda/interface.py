@@ -240,6 +240,18 @@ class CarInterface(object):
       ret.longitudinalKpV = [1.2, 0.8, 0.5]
       ret.longitudinalKiBP = [0., 35.]
       ret.longitudinalKiV = [0.18, 0.12]
+    elif candidate == CAR.ACURA_TLX:
+      stop_and_go = True
+      ret.mass = 3671./2.205 + std_cargo
+      ret.wheelbase = 2.77
+      ret.centerToFront = ret.wheelbase * 0.37
+      ret.steerRatio = 15.0
+      ret.steerKpV, ret.steerKiV = [[0.4], [0.12]]
+
+      ret.longitudinalKpBP = [0., 5., 35.]
+      ret.longitudinalKpV = [1.2, 0.8, 0.5]
+      ret.longitudinalKiBP = [0., 35.]
+      ret.longitudinalKiV = [0.18, 0.12]
     else:
       raise ValueError("unsupported car %s" % candidate)
 

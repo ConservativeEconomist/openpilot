@@ -28,7 +28,7 @@ interfaces = {
   HONDA.ODYSSEY: HondaInterface,
   HONDA.ACURA_RDX: HondaInterface,  
   HONDA.PILOT: HondaInterface,
-
+  HONDA.ACURA_TLX: HondaInterface,
 
   TOYOTA.PRIUS: ToyotaInterface,
   TOYOTA.RAV4: ToyotaInterface,

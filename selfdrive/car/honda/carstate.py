@@ -21,7 +21,7 @@ def parse_gear_shifter(can_gear_shifter, car_fingerprint):
       return "drive"
     elif can_gear_shifter == 0xa:
       return "sport"
-  elif car_fingerprint in (CAR.CIVIC, CAR.CRV, CAR.ACURA_RDX):
+  elif car_fingerprint in (CAR.CIVIC, CAR.CRV, CAR.ACURA_RDX, CAR.ACURA_TLX):
     if can_gear_shifter == 0x1:
       return "park"
     elif can_gear_shifter == 0x2:
@@ -140,6 +140,10 @@ def get_can_signals(CP):
     dbc_f = 'honda_pilot_touring_2017_can_generated.dbc'
     signals += [("MAIN_ON", "SCM_BUTTONS", 0),
                 ("CAR_GAS", "GAS_PEDAL_2", 0)]
+  elif CP.carFingerprint == CAR.ACURA_ILX:
+    dbc_f = 'honda_civic_touring_2016_can_generated.dbc'
+    signals += [("CAR_GAS", "GAS_PEDAL_2", 0),
+                ("MAIN_ON", "SCM_BUTTONS", 0)]
 
   # add gas interceptor reading if we are using it
   if CP.enableGas:
