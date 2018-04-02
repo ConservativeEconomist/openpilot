@@ -140,7 +140,7 @@ def get_can_signals(CP):
     dbc_f = 'honda_pilot_touring_2017_can_generated.dbc'
     signals += [("MAIN_ON", "SCM_BUTTONS", 0),
                 ("CAR_GAS", "GAS_PEDAL_2", 0)]
-  elif CP.carFingerprint == CAR.ACURA_ILX:
+  elif CP.carFingerprint == CAR.ACURA_TLX:
     dbc_f = 'honda_civic_touring_2016_can_generated.dbc'
     signals += [("CAR_GAS", "GAS_PEDAL_2", 0),
                 ("MAIN_ON", "SCM_BUTTONS", 0)]
