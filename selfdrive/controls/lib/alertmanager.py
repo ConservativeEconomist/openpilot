@@ -72,31 +72,31 @@ class AlertManager(object):
 
     "fcw": Alert(
         "Brake!",
-        "Risk of Collision",
+        "Risk of collision detected",
         AlertStatus.critical, AlertSize.full,
         Priority.HIGH, "fcw", "chimeRepeated", 1., 2., 2.),
 
     "steerSaturated": Alert(
         "TAKE CONTROL",
-        "Turn Exceeds Steering Limit",
+        "Turn exceeds steering limit",
         AlertStatus.userPrompt, AlertSize.mid,
         Priority.LOW, "steerRequired", "chimeSingle", 1., 2., 3.),
 
     "steerTempUnavailable": Alert(
         "TAKE CONTROL",
-        "Steering Temporarily Unavailable",
+        "Steering temporarily unavailable",
         AlertStatus.userPrompt, AlertSize.mid,
         Priority.LOW, "steerRequired", "chimeDouble", .4, 2., 3.),
 
     "preDriverDistracted": Alert(
         "TAKE CONTROL",
-        "User Appears Distracted",
+        "User appears distracted",
         AlertStatus.userPrompt, AlertSize.mid,
         Priority.LOW, "steerRequired", None, 0., .1, .1),
 
     "driverDistracted": Alert(
         "TAKE CONTROL TO REGAIN SPEED",
-        "User Appears Distracted",
+        "User appears distracted",
         AlertStatus.critical, AlertSize.full,
         Priority.MID, "steerRequired", "chimeRepeated", .1, .1, .1),
 
@@ -113,62 +113,62 @@ class AlertManager(object):
         Priority.HIGH, "steerRequired", "chimeRepeated", 1., 3., 3.),
 
     "steerTempUnavailableNoEntry": Alert(
-        "openpilot Unavailable",
-        "Steering Temporarily Unavailable",
+        "Comma Unavailable",
+        "Steering temporarily unavailable",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 0., 3.),
 
     "manualRestart": Alert(
         "TAKE CONTROL",
-        "Resume Driving Manually",
+        "Resume driving manually",
         AlertStatus.userPrompt, AlertSize.mid,
         Priority.LOW, None, None, 0., 0., .2),
 
     # Non-entry only alerts
     "wrongCarModeNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Main Switch Off",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 0., 3.),
 
     "dataNeededNoEntry": Alert(
-        "openpilot Unavailable",
-        "Data Needed for Calibration. Upload Drive, Try Again",
+        "Comma Unavailable",
+        "Data needed for calibration. Upload drive, try again",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 0., 3.),
 
     "outOfSpaceNoEntry": Alert(
-        "openpilot Unavailable",
-        "Out of Storage Space",
+        "Comma Unavailable",
+        "Out of storage space",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 0., 3.),
 
     "pedalPressedNoEntry": Alert(
-        "openpilot Unavailable",
-        "Pedal Pressed During Attempt",
+        "Comma Unavailable",
+        "Pedal pressed during attempt",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, "brakePressed", "chimeDouble", .4, 2., 3.),
 
     "speedTooLowNoEntry": Alert(
-        "openpilot Unavailable",
-        "Speed Too Low",
+        "Comma Unavailable",
+        "Speed too low",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "brakeHoldNoEntry": Alert(
-        "openpilot Unavailable",
-        "Brake Hold Active",
+        "Comma Unavailable",
+        "Brake hold active",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "parkBrakeNoEntry": Alert(
-        "openpilot Unavailable",
-        "Park Brake Engaged",
+        "Comma Unavailable",
+        "Park brake engaged",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "lowSpeedLockoutNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Cruise Fault: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
@@ -249,7 +249,7 @@ class AlertManager(object):
 
     "commIssue": Alert(
         "TAKE CONTROL IMMEDIATELY",
-        "CAN Error: Check Connections",
+        "CAN Error: Restart the Car",
         AlertStatus.critical, AlertSize.full,
         Priority.HIGH, "steerRequired", "chimeRepeated", 1., 3., 4.),
 
@@ -291,128 +291,128 @@ class AlertManager(object):
 
     # not loud cancellations (user is in control)
     "noTarget": Alert(
-        "openpilot Canceled",
+        "Comma Canceled",
         "No close lead car",
         AlertStatus.normal, AlertSize.mid,
         Priority.HIGH, None, "chimeDouble", .4, 2., 3.),
 
     "speedTooLow": Alert(
-        "openpilot Canceled",
+        "Comma Canceled",
         "Speed too low",
         AlertStatus.normal, AlertSize.mid,
         Priority.HIGH, None, "chimeDouble", .4, 2., 3.),
 
     # Cancellation alerts causing non-entry
     "overheatNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "System overheated",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "wrongGearNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Gear not D",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "calibrationInvalidNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Calibration Invalid: Reposition EON and Recalibrate",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "calibrationInProgressNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Calibration in Progress",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "doorOpenNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Door open",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "seatbeltNotLatchedNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Seatbelt unlatched",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "espDisabledNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "ESP Off",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "radarCommIssueNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Radar Error: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "radarFaultNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Radar Error: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "modelCommIssueNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Model Error: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "controlsFailedNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Controls Failed",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "commIssueNoEntry": Alert(
-        "openpilot Unavailable",
-        "CAN Error: Check Connections",
+        "Comma Unavailable",
+        "CAN Error: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "steerUnavailableNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Steer Fault: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "brakeUnavailableNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Brake Fault: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "gasUnavailableNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Gas Error: Restart the Car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "reverseGearNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Reverse Gear",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "cruiseDisabledNoEntry": Alert(
-        "openpilot Unavailable",
-        "Cruise is Off",
+        "Comma Unavailable",
+        "Cruise is off",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "noTargetNoEntry": Alert(
-        "openpilot Unavailable",
-        "No Close Lead Car",
+        "Comma Unavailable",
+        "No close lead car",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),
 
     "plannerErrorNoEntry": Alert(
-        "openpilot Unavailable",
+        "Comma Unavailable",
         "Planner Solution Error",
         AlertStatus.normal, AlertSize.mid,
         Priority.LOW, None, "chimeDouble", .4, 2., 3.),

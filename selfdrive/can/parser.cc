@@ -294,7 +294,6 @@ class CANParser {
 
     UpdateValid(sec);
 
-    zmq_msg_close(&msg);
   }
 
   std::vector<SignalValue> query(uint64_t sec) {
