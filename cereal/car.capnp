@@ -1,7 +1,7 @@
-using Cxx = import "./include/c++.capnp";
+using Cxx = import "c++.capnp";
 $Cxx.namespace("cereal");
 
-using Java = import "./include/java.capnp";
+using Java = import "java.capnp";
 $Java.package("ai.comma.openpilot.cereal");
 $Java.outerClassname("Car");
 
@@ -293,7 +293,6 @@ struct CarParams {
     elm327 @3;
     gm @4;
     hondaBosch @5;
-    ford @6;
   }
 
   # things about the car in the manual
